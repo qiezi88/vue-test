@@ -1,0 +1,28 @@
+// out:false
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+img{
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+ul{
+    list-style: none;
+
+}
+.ellipsis-2{
+    overflow: hidden;
+    //ellipsis:当对象内文本一处时显示省略标记(...)
+    text-overflow: ellipsis;
+    // 需求要求展示两行，多余的文字用三个点替代
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

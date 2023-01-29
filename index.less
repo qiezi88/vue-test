@@ -1,0 +1,166 @@
+@import './base.less';
+// 书写B站的CSS样式
+//定义个变量 存储vw
+@vw : 3.75vw;
+@color:#fb7299;
+@txtcolor:#505050;
+@pcolor:#212121;
+// 头部样式
+.header{
+    width: 100%;
+    height: (84/@vw);
+    background-color: #fff;
+    // 固定定位
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.top{
+    width: 100%;
+    height: (44/@vw);
+    padding-left: (18/@vw);
+    padding-right: (12/@vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color: @color;
+}
+.iconfont{
+    font-size: (28/@vw);
+}
+.right{
+    width: (160/@vw);
+    height: (40/@vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iconfont{
+        color: #ccc;
+        font-size: (22/@vw);
+    }
+}
+.face img{
+    width: (24 / @vw);
+    height: (24 / @vw);
+    border-radius: 50%;
+}
+.loadapp img{
+    width: (72/@vw);
+    height: (24 / @vw);
+}
+.bottom{
+    width: 100%;
+    height: (40/@vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left{
+        width: (335/@vw);
+        height: (40/@vw);
+        overflow: hidden;
+    }
+    .iconfont{
+        font-size: (20/@vw);
+    }
+}
+.header_list{
+    width: (360/@vw);
+    height: (40/@vw);
+    font-size: (16/@vw);
+    color: @txtcolor;
+    display: flex;
+    text-align: center;
+}
+.header_list a{
+    display: inline-block;
+    font-size: (14/@vw);
+    padding: 0 (16/@vw);
+    height: (40/@vw);
+    line-height: (40/@vw);
+}
+.header_list a:first-child{
+    border-bottom: 1px solid @color;
+    color: @color;
+}
+.bottom .right{
+    width: (40/@vw);
+    height: (22/@vw);
+    padding-left: (10/@vw);
+}
+
+// 主体部分
+.main{
+    position: absolute;
+    top: (84/@vw);
+    width: 100%;
+    height: (500/@vw);
+    padding: 0 (5/@vw);
+}
+.card-boxs{
+    display: flex;
+    justify-content: space-between;
+    //换行
+    flex-wrap: wrap;
+}
+.card-boxs a{
+    display: block;
+    width: (182/@vw);
+    height: (135/@vw);
+    padding: (8/@vw) (5/@vw);
+}
+.card{
+    position: relative;
+}
+.card .count{
+    //弹性盒子的宽必须加
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(transparent,rgba(0,0,0,.85));
+    span{
+        font-size: (12/@vw);
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+}
+.card .count .iconfont{
+    font-size: (14/@vw);
+    color: #fff;
+    margin-right: (5/@vw);
+}
+.card-boxs .title{
+    margin-top: (5/@vw);
+    color: @pcolor;
+    font-size: (12/@vw);
+}
+// 底部
+.footer{
+    position: fixed;
+    bottom: (30/@vw);
+    width: 100%;
+    height: (36/@vw);
+    padding: 0 (12/@vw);
+}
+.float-openapp{
+    width: 100%;
+    height: 100%;
+    line-height: (36/@vw);
+    background-color: @color;
+    border-radius: (25/@vw);
+    text-align: center;
+    color: #fff;
+    font-size: (14/@vw);
+    .iconfont{
+        font-size: (16/@vw);
+    }
+    .iconbili{
+        margin-right: (10/@vw);
+    }
+}
